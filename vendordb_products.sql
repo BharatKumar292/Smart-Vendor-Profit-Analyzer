@@ -24,10 +24,11 @@ DROP TABLE IF EXISTS `products`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `products` (
   `product_id` int NOT NULL AUTO_INCREMENT,
-  `product_name` varchar(100) DEFAULT NULL,
-  `purchase_price` double DEFAULT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `purchase_price` double NOT NULL,
+  `quantity_available` int NOT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,11 +37,11 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Shampoo',219),(2,'Perfume',400);
+INSERT INTO `products` VALUES (1,'Rice(kg)',120,17),(2,'Cooking Oil(L)',480,16),(3,'Sugar',160,20),(4,'Salt(kg)',20,20),(5,'Milk(L)',100,10),(6,'Mineral Water(1L)',50,100),(7,'ToothPaste',70,10),(8,'Sunsilk(shampoo)',470,12),(9,'Choclate Bar',110,100),(10,'Tissue Box',100,50);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-09 22:31:50
+-- Dump completed on 2026-07-20 12:10:43
